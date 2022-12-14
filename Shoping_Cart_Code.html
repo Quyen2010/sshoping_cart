@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/reset.css">
+    <link rel="stylesheet" href="public/css/Shoping_Cart_Code.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&family=Open+Sans:wght@300;400;500&family=Oswald:wght@700&family=Roboto&family=Roboto+Condensed&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <title>Shoping Cart</title>
+</head>
+<body>
+    <header >
+        <div class="container">
+            <div class="Veggy flex j-between a-center ">
+                <div class="logo">
+                    <a class="block" href="#"><img src="https://res.cloudinary.com/sivadass/image/upload/v1493547373/dummy-logo/Veggy.png" alt=""></a>
+                </div>
+               <div class="search flex">
+                    <input placeholder="Search for Vegetables and Fruits" type="text">
+                    <button ><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="cart flex">
+                    <div class="item ">
+                        <div class="no-of-items j-end flex">
+                            <span class="text">No. of items</span>
+                            <span class="m-5">:</span>
+                            <span class="price">0</span>
+                        </div>
+                        <div class="sub j-end flex ">
+                            <span class="text">Sub Total</span>
+                            <span class="m-5">:</span>
+                            <span class="price">0</span>
+                        </div>
+                    </div>
+                    <div class="cart-shoping">
+                        <a class="cart_icon" href="#"><img src="https://res.cloudinary.com/sivadass/image/upload/v1493548928/icons/bag.png" alt="cart"></a>
+                        <div class="cart-dropdown">
+                            <div>
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1495427934/icons/empty-cart.png" alt="empty">
+                            </div>
+                            <span class="empty flex j-center">you cart is empty!</span>
+                            <button class="btn-checkout disabled">PROCEED TO CHECOUT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="display">
+        <div class="container">
+            <div class="product">
+                <a class="img_product" href="#"><img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/broccoli.jpg" alt="broxolli"></a>
+                <div class="info">
+                    <p>Brocolli - 1 Kg</p>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i>120</h3>
+                    <div class="insert_delete">
+                        <a class="delete " href="#"><i class="fa-solid fa-circle-minus"></i></a>
+                        <input type="text">
+                        <a class="insert" href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                    </div>
+                    <button class="add_to_cart">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/shoping_cart_code.js"></script>
+</html>
