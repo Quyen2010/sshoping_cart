@@ -1,5 +1,6 @@
-@import "_color";
+@import "_available";
 @import "_flex";
+@import "_grid";
 //@import "_grid";
 
 html , body, input, button{
@@ -22,8 +23,7 @@ header{
     .container{
         .Veggy{
             .logo{//logo la hinh anh 
-                display: block;
-                font-size: 12px;
+                width: 123px;
                   //letter-spacing: 2px;//khoang cach chu veggy , nhung day la logo 
             }
             .search{
@@ -64,27 +64,37 @@ header{
                         font-size: 30px;
                     }
                     .cart-dropdown{
-                        position: absolute;
+                        display: none;
+                        position:absolute;
                         right:0;
-                        margin-top: 12px;
+                        margin-top: 20px;
                         background-color: white;
+                        box-shadow: 0px 2px 5px -2px ;
+                        padding: 18px 0px;
+                        border: 1px solid rgba($color: #000000, $alpha: 0.2);
                         &::after{
                             content: '';
-                            width: 10px;
-                            height: 10px;
-                            border: 1px solid rgba($color: #000000, $alpha: 0.4);
-
+                            width: 20px;
+                            height: 20px;
+                            position: absolute;
+                            top: 0px;
+                            right: 15px;
+                            transform: translateY(-50%) rotate(45deg);
+                            border: 1px solid rgba($color: #000000, $alpha: 0.2);
+                            background-color: white;
+                            border-right: none;
+                            border-bottom: none;
                         }
                         
                         .btn-checkout{
                             &.disabled{
                                 cursor:not-allowed;
-                                opacity: 4;
+                                opacity: 0.4;
                             }
                             display: block;
                             width: 90%;
                             margin: 0 auto;
-                            cursor: not-allowed;
+                            cursor: pointer;
                             background-color: orange;
                             padding:16px 8px;
                             color:white;
@@ -100,35 +110,82 @@ header{
 
     }
 }
-.display{
-    background-color: $bgBody;
-    .product{
-        border: 1px solid white;
-        // a{
-        //     .img_product{
-               
-        //     }
-        // }
-        // .info{
-        //     p{
-    
-        //     }
-        //     h3{
-        //         i{
-                
-        //         }
-        //     }
-        //     .insert_delete{
-        //         a{
-    
-        //         }
-        //         input{
-    
-        //         }
-        //     }
-        //     button{
-                
-        //     }
-        // }
+.products{
+    .container{
+        .product-list{
+            .item{
+                color:$bold-grey;
+                padding:10px;
+                background-color: white;
+                transition: 0.6s;
+                border:1px solid $bgBody;
+                &:hover{
+                    transform: translateY(-5px);
+                    box-shadow: 0px 5px 10px -2px rgba($color: #000000, $alpha: 0.3);
+                }
+                .collect{
+                    overflow: hidden;
+                    img{
+                        max-width: 100%;
+                        transition: 0.3s;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }                    
+                }
+                h2{
+                    font-size: 20px;
+                    font-weight: 100px;
+                    margin:15px 0px;
+                }
+                span{
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+                .option{
+                    .btn{
+                        border: 1px solid $grey;
+                        width: 30px;
+                        height: 30px;
+                        font-size: 20px;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        color: $grey;
+                        background-color: white;
+                        &:hover{
+                            border: 1px solid $primary;
+                            i{
+                                color:$primary;
+                            }
+                        }
+                    }
+
+                    .quantity{
+                        padding: 3px;
+                        border: 1px solid $grey;
+                        font-size: 20px;
+                        width: 70px;
+                        margin:15px 10px;
+                        -webkit-appearance: none ;
+                        &:hover{
+                            border: 1px solid $primary;
+                        }
+                    }
+                }
+                .btn-add{
+                    padding: 16px 0px;
+                    width: 90%;
+                    background-color:$primary;
+                    color:white;
+                    font-size: 18px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    &.added{
+                        background-color: orange;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
     }
 }
